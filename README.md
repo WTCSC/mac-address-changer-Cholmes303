@@ -1,21 +1,23 @@
+# MAC Address Changer Script
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/tp86o73G)
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=17743676)
 
-#MAC Address Changer Script
+
 
 This script allows you to change the MAC address of a specified network interface. It validates the provided MAC address, handles errors, and ensures the changes are applied safely.
 
-##Features
+## Features
 
--Accepts command-line arguments for the network interface and new MAC address.
+- Accepts command-line arguments for the network interface and new MAC address.
 
--Validates MAC address format.
+- Validates MAC address format.
 
--Handles common errors (e.g., invalid interface, permission issues).
+- Handles common errors (e.g., invalid interface, permission issues).
 
--Provides clear error messages and success confirmations.
+- Provides clear error messages and success confirmations.
 
-##Installation Instructions
+## Installation Instructions
 
 1. Download the Script:
 Save the script file (./mac-daddy.sh) to your system.
@@ -31,7 +33,7 @@ chmod +x change_mac.sh
 
  - The script relies on the ip command, which is typically included in most Linux distributions.
 
-##Usage
+## Usage
 
 To run the script, you must have administrative privileges. Use the following syntax:
 
@@ -39,7 +41,7 @@ To run the script, you must have administrative privileges. Use the following sy
 sudo ./change_mac.sh -i <interface> -m <new-mac-address>
 ```
 
-##Examples:
+## Examples:
 
 1. Change the MAC address of eth0 to 00:11:22:33:44:55:
 
@@ -53,19 +55,19 @@ sudo ./change_mac.sh -i eth0 -m 00:11:22:33:44:55
 sudo ./change_mac.sh -i wlan0 -m AA:BB:CC:DD:EE:FF
 ```
 
-##Script Details
+## Script Details
 
-##Command-Line Arguments:
+## Command-Line Arguments:
 
 - -i: Specifies the network interface (e.g., eth0, wlan0).
 
 - -m: Specifies the new MAC address (e.g., 00:11:22:33:44:55).
 
-##Validation:
+## Validation:
 
 - Ensures the MAC address is in the correct format (XX:XX:XX:XX:XX:XX, where XX are hexadecimal values).
 
-##Error Handling:
+## Error Handling:
 
 - Invalid MAC Address: Prints an error if the MAC address format is incorrect.
 
@@ -75,7 +77,7 @@ sudo ./change_mac.sh -i wlan0 -m AA:BB:CC:DD:EE:FF
 
 - Failed Commands: Handles errors during network interface operations (e.g., bringing the interface down or up).
 
-##Troubleshooting
+## Troubleshooting
 
 1. Error: This script must be run as root
 
@@ -97,11 +99,11 @@ ip link
 
 - Solution: Ensure the interface is not in use or locked by another process.
 
-##Demonstration
+## Demonstration
 
 Below is an example of the script in action:
 
-##Example Run:
+## Example Run:
 ```
 $ sudo ./change_mac.sh -i eth0 -m 00:11:22:33:44:55
 Bringing down the interface eth0...
@@ -110,7 +112,7 @@ Bringing up the interface eth0...
 Successfully changed MAC address of eth0 to 00:11:22:33:44:55.
 ```
 
-##Notes
+## Notes
 
 - Ensure you have the necessary permissions and dependencies installed before running the script.
 

@@ -55,7 +55,7 @@ sudo ./mac-daddy.sh -i eth0 -m 00:11:22:33:44:55
 sudo ./mac-daddy.sh -i wlan0 -m AA:BB:CC:DD:EE:FF
 ```
 
-## Script Details
+### Script Details
 ## Command-Line Arguments:
 
 - -i: Specifies the network interface (e.g., eth0, wlan0).

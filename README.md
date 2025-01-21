@@ -55,18 +55,18 @@ sudo ./mac-daddy.sh -i eth0 -m 00:11:22:33:44:55
 sudo ./mac-daddy.sh -i wlan0 -m AA:BB:CC:DD:EE:FF
 ```
 
-### Script Details
-## Command-Line Arguments:
+## Script Details
+### Command-Line Arguments:
 
 - -i: Specifies the network interface (e.g., eth0, wlan0).
 
 - -m: Specifies the new MAC address (e.g., 00:11:22:33:44:55).
 
-## Validation:
+### Validation:
 
 - Ensures the MAC address is in the correct format (XX:XX:XX:XX:XX:XX, where XX are hexadecimal values).
 
-## Error Handling:
+### Error Handling:
 
 - Invalid MAC Address: Prints an error if the MAC address format is incorrect.
 
@@ -76,7 +76,7 @@ sudo ./mac-daddy.sh -i wlan0 -m AA:BB:CC:DD:EE:FF
 
 - Failed Commands: Handles errors during network interface operations (e.g., bringing the interface down or up).
 
-## Troubleshooting
+### Troubleshooting
 
 1. Error: This script must be run as root
 
@@ -102,7 +102,6 @@ ip link
 
 Below is an example of the script in action:
 
-## Example Run:
 ```
 $ sudo ./mac-daddy.sh -i eth0 -m 00:11:22:33:44:55
 Bringing down the interface eth0...

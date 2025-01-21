@@ -21,7 +21,7 @@ This script allows you to change the MAC address of a specified network interfac
 
 1. Download the Script:
 Save the script file "mac-daddy.sh" to your system.
-- You can clone this from the repository using the command:
+You can clone this from the repository using the command:
  ```
  git clone https://github.com/WTCSC/mac-address-changer-Cholmes303.git
  ```

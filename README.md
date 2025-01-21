@@ -41,7 +41,7 @@ To run the script, you must have administrative privileges. Use the following sy
 sudo ./mac-daddy.sh -i <interface> -m <new-mac-address>
 ```
 
-## Examples:
+### Examples:
 
 1. Change the MAC address of eth0 to 00:11:22:33:44:55:
 

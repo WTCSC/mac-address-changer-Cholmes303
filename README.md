@@ -26,7 +26,7 @@ Save the script file (./mac-daddy.sh) to your system.
 Run the following command to grant execution permissions:
 
 ```
-chmod +x change_mac.sh
+chmod +x mac-daddy.sh
 ```
 
 3. Ensure Dependencies Are Installed:
@@ -38,7 +38,7 @@ chmod +x change_mac.sh
 To run the script, you must have administrative privileges. Use the following syntax:
 
 ```
-sudo ./change_mac.sh -i <interface> -m <new-mac-address>
+sudo ./mac-daddy.sh -i <interface> -m <new-mac-address>
 ```
 
 ## Examples:
@@ -46,17 +46,16 @@ sudo ./change_mac.sh -i <interface> -m <new-mac-address>
 1. Change the MAC address of eth0 to 00:11:22:33:44:55:
 
 ```
-sudo ./change_mac.sh -i eth0 -m 00:11:22:33:44:55
+sudo ./mac-daddy.sh -i eth0 -m 00:11:22:33:44:55
 ```
 
 2. Change the MAC address of wlan0 to AA:BB:CC:DD:EE:FF:
 
 ```
-sudo ./change_mac.sh -i wlan0 -m AA:BB:CC:DD:EE:FF
+sudo ./mac-daddy.sh -i wlan0 -m AA:BB:CC:DD:EE:FF
 ```
 
 ## Script Details
-
 ## Command-Line Arguments:
 
 - -i: Specifies the network interface (e.g., eth0, wlan0).
@@ -105,7 +104,7 @@ Below is an example of the script in action:
 
 ## Example Run:
 ```
-$ sudo ./change_mac.sh -i eth0 -m 00:11:22:33:44:55
+$ sudo ./mac-daddy.sh -i eth0 -m 00:11:22:33:44:55
 Bringing down the interface eth0...
 Changing MAC address of eth0 to 00:11:22:33:44:55...
 Bringing up the interface eth0...

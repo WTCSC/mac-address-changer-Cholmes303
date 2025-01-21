@@ -8,7 +8,7 @@ usage() {
     exit 1
 }
 
-# Function to validate MAC address format
+# Function to validate MAC address format.
 validate_mac() {
     local mac=$1
     # Checks that MAC input is in MAC address form. The "^" is used to ensure that the check starts at the beginning of MAC. 
@@ -21,13 +21,13 @@ validate_mac() {
     fi
 }
 
-# Check if the script is run as root
+# Check if the script is run as root (use sudo at the start of the command).
 if [[ $EUID -ne 0 ]]; then
     echo "Error: This script must be run as root."
     exit 1
 fi
 
-# Parse command-line arguments
+# Parse command-line arguments.
 while getopts "i:m:" opt; do
     case $opt in
         i) interface=$OPTARG ;;
@@ -36,35 +36,35 @@ while getopts "i:m:" opt; do
     esac
 done
 
-# Ensure both arguments are provided
+# Ensure both arguments are provided.
 if [[ -z $interface || -z $new_mac ]]; then
     usage
 fi
 
-# Validate the MAC address
+# Validate the MAC address.
 validate_mac $new_mac
 
-# Check if the network interface exists
+# Check if the network interface exists.
 if ! ip link show $interface &> /dev/null; then
     echo "Error: Network interface $interface does not exist."
     exit 1
 fi
 
-# Bring the network interface down
+# Bring the network interface down.
 echo "Bringing down the interface $interface..."
 if ! ip link set dev $interface down; then
     echo "Error: Failed to bring down the interface $interface."
     exit 1
 fi
 
-# Change the MAC address
+# Change the MAC address.
 echo "Changing MAC address of $interface to $new_mac..."
 if ! ip link set dev $interface address $new_mac; then
     echo "Error: Failed to change the MAC address."
     exit 1
 fi
 
-# Bring the network interface back up
+# Bring the network interface back up.
 echo "Bringing up the interface $interface..."
 if ! ip link set dev $interface up; then
     echo "Error: Failed to bring up the interface $interface."

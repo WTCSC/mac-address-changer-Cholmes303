@@ -76,7 +76,7 @@ sudo ./mac-daddy.sh -i wlan0 -m AA:BB:CC:DD:EE:FF
 
 - Failed Commands: Handles errors during network interface operations (e.g., bringing the interface down or up).
 
-### Troubleshooting
+## Troubleshooting
 
 1. Error: This script must be run as root
 

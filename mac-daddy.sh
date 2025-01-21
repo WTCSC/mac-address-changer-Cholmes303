@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Function to display usage instructions
 usage() {
     echo "Usage: $0 -i <interface> -m <new-mac-address>"
@@ -10,6 +11,8 @@ usage() {
 # Function to validate MAC address format
 validate_mac() {
     local mac=$1
+    # Checks that MAC input is in MAC address form. The "^" is used to ensure that the check starts at the beginning of MAC. 
+    # Then "[0-9A-Fa-f]" is all hexadecimal values. {5} means for the first 5 being between colons. Then the last is checking the final MAC value.
     if [[ $mac =~ ^([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}$ ]]; then
         return 0
     else

@@ -80,23 +80,23 @@ sudo ./mac-daddy.sh -i wlan0 -m AA:BB:CC:DD:EE:FF
 
 1. Error: This script must be run as root
 
-- Solution: Use sudo to run the script.
+    - Solution: Use sudo to run the script.
 
 2. Error: Invalid MAC address format
 
-- Solution: Verify the MAC address format is correct. Example: 00:11:22:33:44:55.
+    - Solution: Verify the MAC address format is correct. Example: 00:11:22:33:44:55.
 
 3. Error: Network interface does not exist
 
-- Solution: Check the available interfaces using the command:
+    - Solution: Check the available interfaces using the command:
 
-```
-ip link
-```
+    ```
+    ip link
+    ```
 
 4. Error: Failed to bring the interface up or down
 
-- Solution: Ensure the interface is not in use or locked by another process.
+    - Solution: Ensure the interface is not in use or locked by another process.
 
 ## Demonstration
 

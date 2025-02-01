@@ -22,7 +22,7 @@ This is the script in Shell that will allow you to change the MAC address of a s
 ## Installation Instructions
 
 1. Download the Script:
-Save the script file "mac-daddy.sh" to your system.
+Save the script file "mac_daddy.sh" to your system.
 You can clone this from the repository using the command:
  ```
  git clone https://github.com/WTCSC/mac-address-changer-Cholmes303.git
